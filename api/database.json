@@ -62,15 +62,6 @@
             "computerId": 4,
             "departmentId": 4,
             "locationId": 1
-        },
-        {
-            "id": 5,
-            "firstName": "Straton",
-            "lastName": "Timoteus",
-            "age": 20,
-            "computerId": 5,
-            "departmentId": 2,
-            "locationId": 2
         }
     ],
     "departments": [
@@ -103,6 +94,66 @@
         {
             "id": 3,
             "city": "Atlanta"
+        }
+    ],
+    "customers": [
+        {
+            "id": 1,
+            "name": "Juniper Distribution"
+        },
+        {
+            "id": 2,
+            "name": "Bastion Dublin"
+        },
+        {
+            "id": 3,
+            "name": "Johnny Bravo"
+        },
+        {
+            "id": 4,
+            "name": "Lisa Venise"
+        }
+    ],
+    "employeeCustomers": [
+        {
+            "id": 1,
+            "customerId": 1,
+            "employeeId": 1
+        },
+        {
+            "id": 2,
+            "customerId": 2,
+            "employeeId": 1
+        },
+        {
+            "id": 3,
+            "customerId": 3,
+            "employeeId": 2
+        },
+        {
+            "id": 4,
+            "customerId": 4,
+            "employeeId": 2
+        },
+        {
+            "id": 5,
+            "customerId": 1,
+            "employeeId": 3
+        },
+        {
+            "id": 6,
+            "customerId": 2,
+            "employeeId": 3
+        },
+        {
+            "id": 7,
+            "customerId": 3,
+            "employeeId": 4
+        },
+        {
+            "id": 8,
+            "customerId": 4,
+            "employeeId": 4
         }
     ]
 }
