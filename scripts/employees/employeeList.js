@@ -2,23 +2,20 @@
 
 // Imports
 import { getEmployees, useEmployees } from "./employeeProvider.js";
-import { getComputers, useComputers } from "../computers/computerProvider.js";
 import { employeeHTMLer } from "./employee.js";
 
 // Selectors
-const targetElement = document.querySelector('.employeeInfo');
-
-// Component Variables
-let employees = [];
-let computers = [];
+const targetElement = document.querySelector('.employeeContainer');
 
 // Functions
 export const employeeList = () => {
     getEmployees()
     .then(() => {
-        employees = useEmployees();
+        // Store employee & related computer information in employees variable
+        const employees = useEmployees();
 
-        console.log(employees.map(employee => employeeHtmler(employee)).join(""))
-    })
-}
+        // Convert information to HTML and push to the DOM
+        targetElement.innerHTML = (employees.map(employee => employeeHTMLer(employee)).join(""))
+    });
+};
 
