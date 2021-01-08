@@ -4,7 +4,7 @@ let employees = [];
 
 // Fetch employees from the local API & attach each employeeObject's computer information
 export const getEmployees = () => {
-    return fetch('http://localhost:8088/employees?_expand=computer&_expand=department')
+    return fetch('http://localhost:8088/employees?_expand=computer&_expand=department&_expand=location')
     .then(response => response.json())
     .then((parsedEmployees) => employees = parsedEmployees);
 };
