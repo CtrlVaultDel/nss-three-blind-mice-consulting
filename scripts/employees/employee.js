@@ -3,10 +3,15 @@
 export const employeeHTMLer = (employee) => {
     return `
     <section class="employee">
-        <div class="employee__name">Name: ${employee.firstName} ${employee.lastName}</div>
-        <div class="employee__age">Age: ${employee.age}</div>
-        <div class="employee__computerModel">Computer Model: ${employee.computer.model}</div>
-        <div class="employee__computerYear">Computer Year: ${employee.computer.year}</div>
+        <header class="employee__name">
+            <h1>${employee.firstName} ${employee.lastName}</h1>
+        </header>
+        <div class="employee__computer">
+            Currently using a ${employee.computer.year} ${employee.computer.model}.
+        </div>
+        <div class="employee__department">
+            Works in the ${employee.department.name} department.
+        </div>
     </section>
     `;
 };

@@ -32,35 +32,58 @@
             "firstName": "Rainu",
             "lastName": "Ittycheriah",
             "age": 23,
-            "computerId": 1
+            "computerId": 1,
+            "departmentId": 1
         },
         {
             "id": 2,
             "firstName": "Nikostratos",
             "lastName": "Nicostratus",
             "age": 40,
-            "computerId": 2
+            "computerId": 2,
+            "departmentId": 2
         },
         {
             "id": 3,
             "firstName": "Alexios",
             "lastName": "Antipatros",
             "age": 34,
-            "computerId": 3
+            "computerId": 3,
+            "departmentId": 3
         },
         {
             "id": 4,
             "firstName": "Melite",
             "lastName": "Leonidas",
             "age": 33,
-            "computerId": 4
+            "computerId": 4,
+            "departmentId": 4
         },
         {
             "id": 5,
             "firstName": "Straton",
             "lastName": "Timoteus",
             "age": 20,
-            "computerId": 5
+            "computerId": 5,
+            "departmentId": 2
+        }
+    ],
+    "departments": [
+        {
+            "id": 1,
+            "name": "HR"
+        },
+        {
+            "id": 2,
+            "name": "Accounting"
+        },
+        {
+            "id": 3,
+            "name": "Marketing"
+        },
+        {
+            "id": 4,
+            "name": "IT"
         }
     ]
 }
