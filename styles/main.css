@@ -1,0 +1,10 @@
+.employeeContainer {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.employee {
+    flex-basis: 30%;
+    margin: 5px;
+    border: solid black 1px;
+}
