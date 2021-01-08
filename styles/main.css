@@ -1,10 +1,14 @@
 .employeeContainer {
     display:flex;
     flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
 }
 
 .employee {
-    flex-basis: 30%;
+    flex-basis: 50%;
+    min-width: 290px;
+    max-width: 290px;
     margin: 5px;
     border: solid black 1px;
 }

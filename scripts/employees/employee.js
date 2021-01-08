@@ -12,6 +12,9 @@ export const employeeHTMLer = (employee) => {
         <div class="employee__department">
             Works in the ${employee.department.name} department.
         </div>
+        <div class="employee_location">
+            Works at the ${employee.location.city} office.
+        </div>
     </section>
     `;
 };
