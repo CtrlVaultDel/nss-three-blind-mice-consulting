@@ -1,4 +1,4 @@
-// Purpose: To list the employees and their related computers onto the DOM
+// Purpose: To list the employees and their related information onto the DOM
 
 // Imports
 import { getEmployees, useEmployees } from "./employeeProvider.js";
@@ -13,14 +13,13 @@ export const employeeList = () => {
     getEmployees()
     .then(getCustomers)
     .then(() => {
-        // Store employee & related computer information in employees variable
+        // Store relevant information
         const employees = useEmployees();
         const customers = useCustomers();
+
         employees.forEach(employee => employee.customers = customers.filter((customer) => customer.employeeId == employee.id))
-        console.log("employees",employees);
         
         // Convert information to HTML and push to the DOM
         targetElement.innerHTML = (employees.map(employee => employeeHTMLer(employee)).join(""))
     });
 };
-
