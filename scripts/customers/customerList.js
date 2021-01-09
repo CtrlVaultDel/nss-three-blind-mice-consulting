@@ -1,7 +1,7 @@
 // Purpose: To list the customers and their related information onto the DOM
 
 // Imports
-import { getEmployees, useEmployees } from "../employees/employeeProvider.js";
+import { getRelations, useRelations } from "./customerProvider.js";
 import { getCustomers, useCustomers } from "./customerProvider.js";
 import { customerHTMLer } from "./customer.js";
 
@@ -10,18 +10,22 @@ const targetElement = document.querySelector('.customerContainer');
 
 // Functions
 export const customerList = () => {
-    getEmployees()
-    .then(getCustomers)
+    getCustomers()
+    .then(getRelations)
     .then(() => {
         // Store relevant information
-        const employees = useEmployees();
         const customers = useCustomers();
+        const relations = useRelations();
+        console.log(customers);
 
-        customers.forEach(customer => customer.employees = employees.filter((employee) => employee.id == customer.employeeId))
+        customers.forEach(customer => 
+            customer.employees = relations.filter((relation) => 
+                relation.customerId == customer.id))
         
         console.log("customers",customers);
         
         // Convert information to HTML and push to the DOM
-        targetElement.innerHTML = (customer.map(customer => customerHTMLer(customer)).join(""))
+        targetElement.innerHTML = (customers.map(customer => 
+            customerHTMLer(customer)).join(""))
     });
 };

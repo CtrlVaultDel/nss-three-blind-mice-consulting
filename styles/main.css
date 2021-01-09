@@ -3,17 +3,31 @@ ul {
     list-style: none;
 }
 
-.employeeContainer {
+.selections {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.selectButton {
+    margin: 5px;
+}
+
+.employeeContainer, .customerContainer {
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
 }
 
-.employee {
+.employee, .customer{
     flex-basis: 50%;
     min-width: 290px;
     max-width: 290px;
     margin: 5px;
     border: solid black 1px;
+}
+
+.hide {
+    display: none;
 }
