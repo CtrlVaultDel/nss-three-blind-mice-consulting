@@ -16,13 +16,10 @@ export const customerList = () => {
         // Store relevant information
         const customers = useCustomers();
         const relations = useRelations();
-        console.log(customers);
 
         customers.forEach(customer => 
             customer.employees = relations.filter((relation) => 
                 relation.customerId == customer.id))
-        
-        console.log("customers",customers);
         
         // Convert information to HTML and push to the DOM
         targetElement.innerHTML = (customers.map(customer => 
